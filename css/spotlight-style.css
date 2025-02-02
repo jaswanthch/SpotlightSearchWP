@@ -1,0 +1,252 @@
+/* Spotlight Modal Styles */
+
+#essp-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+#essp-modal-content {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    width: 90%;
+    max-width: 600px;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+#essp-search-input {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+#essp-results {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+#essp-results li {
+    padding: 10px 20px;
+    border-top: 1px solid #e0e0e0;
+    cursor: pointer;
+}
+
+#essp-results li:hover,
+#essp-results li.selected {
+    background: #f0f0f0;
+}
+
+#essp-results li:active {
+    background: #e0e0e0;
+}
+
+/* Admin Page Items */
+#essp-results li.admin-page {
+    font-style: italic;
+    color: #0073aa;
+    /* WordPress admin blue */
+}
+
+/* Confirmation Prompt Modal */
+#essp-prompt-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#essp-prompt-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#essp-prompt-content p {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+#essp-prompt-content button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+}
+
+#essp-prompt-content button#essp-create-view {
+    background-color: #28a745;
+}
+
+#essp-prompt-content button#essp-create-add-more {
+    background-color: #007bff;
+}
+
+#essp-prompt-content button#essp-confirm-cancel {
+    background-color: #6c757d;
+}
+
+#essp-prompt-content button:hover {
+    opacity: 0.9;
+}
+
+/* Toast Notification */
+#essp-toast {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    padding: 16px;
+    position: fixed;
+    z-index: 10000;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#essp-toast.show {
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+    from {
+        bottom: 20px;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 40px;
+        opacity: 0;
+    }
+}
+
+/* Admin Pages Table Styles */
+#essp-admin-pages-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#essp-admin-pages-table th,
+#essp-admin-pages-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+#essp-admin-pages-table th {
+    background-color: #f1f1f1;
+    font-weight: bold;
+}
+
+#essp-admin-pages-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#essp-admin-pages-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Button Styles */
+.button {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-primary {
+    background-color: #0073aa;
+    color: #fff;
+}
+
+.button-primary:hover {
+    background-color: #005177;
+}
+
+.button-secondary {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+.button-secondary:hover {
+    background-color: #e1e1e1;
+}
+
+/* Form Styles */
+.wrap h1 {
+    margin-bottom: 20px;
+}
+
+.form-table th {
+    width: 25%;
+    padding: 10px;
+    vertical-align: top;
+}
+
+.form-table td {
+    padding: 10px;
+}
+
+.form-table input[type="text"],
+.form-table input[type="url"],
+.form-table select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    .form-table th,
+    .form-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .form-table th {
+        margin-top: 20px;
+    }
+}
